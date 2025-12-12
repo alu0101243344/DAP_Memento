@@ -1,0 +1,47 @@
+@startuml
+class ConsolaJuego {
+- IMemento puntoGuardado
++ void guardarPartida(PantallaBatalla)
++ void cargarPartida(PantallaBatalla)
+}
+
+
+class PantallaBatalla {
+- int hpMewtwo
+- String mensaje
+- boolean capturado
+- BufferedImage imgMagikarp
+- BufferedImage imgMewtwo
+- BufferedImage imgPokeball
++ void atacar()
++ void capturar()
++ void reiniciar()
++ IMemento guardar()
++ void restaurar(IMemento)
+# void paintComponent(Graphics)
+- void dibujarHUD(Graphics2D,int,int,String,int,int)
+}
+
+
+interface IMemento {
+}
+class EstadoBatalla {
+- int hpMewtwo
+- String mensaje
+- boolean capturado
++ int getHpMewtwo()
++ String getMensaje()
++ boolean isCapturado()
+}
+
+
+class EntrenadorPokemon {
++ {static} void main(String[])
+- {static} JButton crearBoton(String,Color)
+}
+
+
+
+javax.swing.JPanel <|-- PantallaBatalla
+IMemento <|.. EstadoBatalla
+@enduml
