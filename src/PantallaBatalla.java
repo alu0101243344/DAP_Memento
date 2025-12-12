@@ -22,9 +22,9 @@ public class PantallaBatalla extends JPanel {
         this.setBackground(Color.WHITE);
 
         try {
-            imgMagikarp = ImageIO.read(new File("magikarp.png"));
-            imgMewtwo = ImageIO.read(new File("mewtwo.png"));
-            imgPokeball = ImageIO.read(new File("pokeball.png"));
+            imgMagikarp = ImageIO.read(new File("doc/magikarp.png"));
+            imgMewtwo = ImageIO.read(new File("doc/mewtwo.png"));
+            imgPokeball = ImageIO.read(new File("doc/pokeball.png"));
         } catch (IOException e) {
             System.out.println("Imagenes no encontradas.");
         }
